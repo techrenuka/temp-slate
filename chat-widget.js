@@ -460,7 +460,8 @@
             
             const botMessageDiv = document.createElement('div');
             botMessageDiv.className = 'chat-message bot';
-            botMessageDiv.textContent = Array.isArray(data) ? data[0].output.output.message : data.output.output.message;;
+            // botMessageDiv.textContent = Array.isArray(data) ? data[0].output.output.message : data.output.output.message;;
+            botMessageDiv.textContent =  data.output.output.message;
             messagesContainer.appendChild(botMessageDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
         } catch (error) {
